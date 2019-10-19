@@ -1,4 +1,4 @@
-AOSiP
+AOSP
 ===========
 
 Getting Started
@@ -7,10 +7,10 @@ Getting Started
 To get started with Android, you'll need to get
 familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
 
-To initialize your local repository using the AOSiP trees, use a command like this:
+To initialize your local repository using the AOSP trees, use a command like this:
 
 ```bash
-repo init -u git://github.com/AOSiP/platform_manifest.git -b pie
+repo init -u git://github.com/AOSP/platform_manifest.git -b pie
 ```
 Then to sync up:
 ```bash
@@ -20,19 +20,12 @@ repo sync --force-sync --no-tags --no-clone-bundle
 Building the source
 ---------------
 
-The source at AOSiP is well configured for building.
+The source at AOSP is well configured for building.
 
 ```bash
 source build/envsetup.sh
 lunch aosip_device-userdebug
 time mka kronic
-```
-
-## Submitting Patches ##
-
-You can submit your patches to AOSiP just by registering at "https://review.aosiprom.com"
-
-Open up terminal to create your ssh keys required for submitting patches to gerrit and type in:
 
 ```bash
 ssh-keygen
@@ -63,12 +56,12 @@ Ctrl O, then Ctrl X to save and exit
 git push ssh://USERNAME@review.aosiprom.com:29418/PROJECT HEAD:refs/for/BRANCH
 ```
 BRANCH - i.e pie
-PROJECT - i.e AOSIP/platform_packages_apps_OwlsNest
+PROJECT - i.e AOSP/platform_packages_apps_OwlsNest
 USERNAME - i.e Shreesha
 
 If you're feeling extra lazy, you can submit streamline the process.  First you need to tell git about your gerrit username:
 ```bash
-git config --global review.review.aosiprom.com.username <Your username registered at AOSiP gerrit>
+git config --global review.review.aosiprom.com.username <Your username registered at AOSP gerrit>
 ```
 
 Now you can run these commands to push changes to gerrit. Note: the first command only needs run once from each project.
